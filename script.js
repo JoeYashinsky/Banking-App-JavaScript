@@ -72,7 +72,7 @@ const displayMovements = function(movements) {
       <div class="movements__value">${movement}</div>
     </div>`;
 
-    containerMovements.insertAdjacentHTML('afterbegin');
+    containerMovements.insertAdjacentHTML('afterbegin', html);
 
   });
 };
