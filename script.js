@@ -61,9 +61,9 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-const displayMovements = function(movements) {
+const displayMovements = function (movements) {
   movements.forEach(function (movement, i) {
-    const type = movement > 0 ? 'deposit' : 'withdrawal'
+    const type = movement > 0 ? 'deposit' : 'withdrawal';
 
     const html = `
     <div class="movements__row">
@@ -73,12 +73,9 @@ const displayMovements = function(movements) {
     </div>`;
 
     containerMovements.insertAdjacentHTML('afterbegin', html);
-
   });
 };
-
 displayMovements(account1.movements);
-displayMovements(account2.movements);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -135,7 +132,7 @@ console.log(letters.join(' - '));  // (10) a - b - c - d - e - f - g - h - i - j
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 for (const movement of movements) {
-  if(movement > 0) {
+  if (movement > 0) {
     console.log(`You deposited ${movement}`);
   } else {
     console.log(`You withdrew ${Math.abs(movement)}`);
@@ -151,7 +148,9 @@ for (const [i, transaction] of movements.entries()) {
   if (transaction > 0) {
     console.log(`Transaction ${i + 1}: You deposited ${transaction} dollars.`);
   } else {
-    console.log(`Transaction ${i + 1}: You withdrew ${Math.abs(transaction)} dollars.`);
+    console.log(
+      `Transaction ${i + 1}: You withdrew ${Math.abs(transaction)} dollars.`
+    );
   }
 }
 // Transaction 1: You deposited 200 dollars.
@@ -159,9 +158,8 @@ for (const [i, transaction] of movements.entries()) {
 // Transaction 3: You withdrew 400 dollars.
 // Transaction 4: You deposited 3000 dollars.
 
-
 console.log('------ FOREACH -----');
-movements.forEach(function(movement) {
+movements.forEach(function (movement) {
   if (movement > 0) {
     console.log(`You deposited ${movement}`);
   } else {
@@ -173,16 +171,19 @@ movements.forEach(function(movement) {
 console.log('---- FOREACH ----');
 movements.forEach(function (transaction, index, array) {
   if (transaction > 0) {
-    console.log(`Transaction ${index + 1}: You deposited ${transaction} dollars.`);
+    console.log(
+      `Transaction ${index + 1}: You deposited ${transaction} dollars.`
+    );
   } else {
-    console.log(`Transaction ${index + 1}: You withdrew ${Math.abs(transaction)} dollars.`);
+    console.log(
+      `Transaction ${index + 1}: You withdrew ${Math.abs(transaction)} dollars.`
+    );
   }
 });
 // Transaction 1: You deposited 200 dollars.
 // Transaction 2: You deposited 450 dollars.
 // Transaction 3: You withdrew 400 dollars.
 // Transaction 4: You deposited 3000 dollars.
-
 
 // MAP
 const currencies = new Map([
@@ -191,9 +192,9 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-currencies.forEach(function(value, key, map) {
+currencies.forEach(function (value, key, map) {
   console.log(`${key}: ${value}`);
-})
+});
 // USD: United States dollar
 // EUR: Euro
 // GBP: Pound sterling
@@ -202,10 +203,9 @@ currencies.forEach(function(value, key, map) {
 const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
 console.log(currenciesUnique);
 // Set(3) {"USD", "GBP", "EUR"}   ONLY shows unique values
-currenciesUnique.forEach(function(value, _, map) {
+currenciesUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
-})
+});
 //  USD: USD
 //  GBP: GBP
 //  EUR: EUR
-
