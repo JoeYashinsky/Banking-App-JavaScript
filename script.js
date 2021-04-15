@@ -190,9 +190,9 @@ movements.forEach(function (transaction, index, array) {
 
 // MAP
 const currencies = new Map([
-  ['USD', 'United States dollar'],
+  ['USD', 'United States Dollar'],
   ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
+  ['GBP', 'Pound Sterling'],
 ]);
 
 currencies.forEach(function (value, key, map) {
