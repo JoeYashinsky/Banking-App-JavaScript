@@ -75,7 +75,7 @@ const displayMovements = function (movements) {
       </div>
       `;
 
-      containerMovements.insertAdjacentHTML('afterbegin', html);
+    containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
 displayMovements(account1.movements);
@@ -90,7 +90,7 @@ displayMovements(account1.movements);
 //   ['GBP', 'Pound sterling'],
 // ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
@@ -217,6 +217,11 @@ currenciesUnique.forEach(function (value, _, map) {
 
 const eurToUSD = 1.1;
 
-const movementsUSD = movements.map(function(mov) {
+const movementsUSD = movements.map(function (mov) {
   return mov * eurToUSD;
-})
+});
+console.log(movements);
+console.log(movementsUSD);
+// (8) [200, 450, -400, 3000, -650, -130, 70, 1300]
+// (8) [220, 495, -440, 330, -715, -143, 77, 1430]
+
