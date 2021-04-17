@@ -225,6 +225,6 @@ console.log(movementsUSD);
 // (8) [200, 450, -400, 3000, -650, -130, 70, 1300]
 // (8) [220, 495, -440, 330, -715, -143, 77, 1430]
 
-const movementsUSDfor = [];
+const movementsUSDfor = []; // set to an empty array
 for(const mov of movements) movementsUSDfor.push(mov * eurToUSD);
 console.log(movementsUSDfor);
