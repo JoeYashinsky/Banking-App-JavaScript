@@ -220,6 +220,9 @@ const eurToUSD = 1.1;
 const movementsUSD = movements.map(function (mov) {
   return mov * eurToUSD;
 });
+
+const movementsUSD = movements.map(mov => mov * eurToUSD);
+
 console.log(movements);
 console.log(movementsUSD);
 // (8) [200, 450, -400, 3000, -650, -130, 70, 1300]
@@ -228,4 +231,6 @@ console.log(movementsUSD);
 const movementsUSDfor = []; // set to an empty array
 for(const mov of movements) movementsUSDfor.push(mov * eurToUSD);
 console.log(movementsUSDfor);
-console.log(movements);
+// (8) [220, 495, -440, 330, -715, -143, 77, 1430]  (same as above)
+
+
