@@ -240,4 +240,5 @@ const movementsDescriptions = movements.map((mov, i, arr) => {
     return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
   }
 })
+console.log(movementsDescriptions);
 
