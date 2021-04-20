@@ -221,7 +221,7 @@ const movementsUSD = movements.map(function (mov) {
   return mov * eurToUSD;
 });
 
-const movementsUSD = movements.map(mov => mov * eurToUSD);
+// const movementsUSD = movements.map(mov => mov * eurToUSD);
 
 console.log(movements);
 console.log(movementsUSD);
@@ -233,4 +233,11 @@ for(const mov of movements) movementsUSDfor.push(mov * eurToUSD);
 console.log(movementsUSDfor);
 // (8) [220, 495, -440, 330, -715, -143, 77, 1430]  (same as above)
 
+const movementsDescriptions = movements.map((mov, i, arr) => {
+  if (mov > 0) {
+    return `Movement ${i + 1}: You deposited ${mov}`;
+  } else {
+    return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
+  }
+})
 
