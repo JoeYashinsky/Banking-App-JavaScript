@@ -81,7 +81,12 @@ const displayMovements = function (movements) {
 displayMovements(account1.movements);
 
 const user = 'Frank Chance'; // want to create a username of user's initials
-const username = user.toLowerCase()
+const username = user
+  .toLowerCase()
+  .split(' ')
+  .map(function (name) {
+    return name[0];
+  });
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -232,7 +237,7 @@ console.log(movementsUSD);
 // (8) [220, 495, -440, 330, -715, -143, 77, 1430]
 
 const movementsUSDfor = []; // set to an empty array
-for(const mov of movements) movementsUSDfor.push(mov * eurToUSD);
+for (const mov of movements) movementsUSDfor.push(mov * eurToUSD);
 console.log(movementsUSDfor);
 // (8) [220, 495, -440, 330, -715, -143, 77, 1430]  (same as above)
 
@@ -247,4 +252,3 @@ const movementsDescriptions = movements.map((mov, i, arr) => {
   }
 });
 console.log(movementsDescriptions);
-
