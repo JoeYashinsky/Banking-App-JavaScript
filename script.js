@@ -80,6 +80,9 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
+const user = 'Frank Chance'; // want to create a username of user's initials
+const username = user.toLowerCase()
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
