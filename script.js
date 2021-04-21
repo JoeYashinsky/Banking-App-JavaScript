@@ -238,7 +238,10 @@ const movementsDescriptions = movements.map((mov, i, arr) => {
     return `Movement ${i + 1}: You deposited ${mov}`;
   } else {
     return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
+
+    // SAME thing, but using the ternary operator
+    // `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}
   }
-})
+});
 console.log(movementsDescriptions);
 
