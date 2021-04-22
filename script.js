@@ -80,6 +80,16 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
+const createUsernames = function(user) {
+  const username = user
+  .toLowerCase()
+  .split(' ')
+  .map(name => name[0])
+  .join('');
+  return username;
+}
+console.log(createUsernames('Joe Tinker'));  // output: jt
+
 const user = 'Frank Chance'; // want to create a username of user's initials
 const username = user
   .toLowerCase()
