@@ -84,9 +84,10 @@ const user = 'Frank Chance'; // want to create a username of user's initials
 const username = user
   .toLowerCase()
   .split(' ')
-  .map(function (name) {
-    return name[0];
-  });
+  .map(name => name[0])
+  .join('');
+
+  console.log(username);   // output:  fc
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
