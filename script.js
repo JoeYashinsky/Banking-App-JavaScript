@@ -89,6 +89,7 @@ const createUsernames = function(user) {
   return username;
 }
 console.log(createUsernames('Joe Tinker'));  // output: jt
+console.log(createUsernames('Mordecai Brown'));  //  output: mb
 
 const user = 'Frank Chance'; // want to create a username of user's initials
 const username = user
