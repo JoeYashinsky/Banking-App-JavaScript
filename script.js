@@ -100,16 +100,18 @@ const username = user
 
 console.log(username); // output:  fc
 
-const createUsernamesArray = function (userAccounts) {
-  userAccounts.forEach(function(userAcc) {
-    userAcc.username = user.owner
-    .toLowerCase()
-    .split(' ')
-    .map(name => name[0])
-    .join('');
-  })
+const createUsernamesArray = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
 };
 createUsernamesArray(accounts);
+console.log(accounts);
+// (4)  array shown with all account subjects, now with a Username property
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
