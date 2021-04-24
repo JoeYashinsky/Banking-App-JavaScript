@@ -80,16 +80,16 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
-const createUsernames = function(user) {
+const createUsernames = function (user) {
   const username = user
-  .toLowerCase()
-  .split(' ')
-  .map(name => name[0])
-  .join('');
+    .toLowerCase()
+    .split(' ')
+    .map(name => name[0])
+    .join('');
   return username;
-}
-console.log(createUsernames('Joe Tinker'));  // output: jt
-console.log(createUsernames('Mordecai Brown'));  //  output: mb
+};
+console.log(createUsernames('Joe Tinker')); // output: jt
+console.log(createUsernames('Mordecai Brown')); //  output: mb
 
 const user = 'Frank Chance'; // want to create a username of user's initials
 const username = user
@@ -98,7 +98,18 @@ const username = user
   .map(name => name[0])
   .join('');
 
-  console.log(username);   // output:  fc
+console.log(username); // output:  fc
+
+const createUsernamesArray = function (userAccounts) {
+  userAccounts.forEach(function(userAcc) {
+    userAcc.username = user.owner
+    .toLowerCase()
+    .split(' ')
+    .map(name => name[0])
+    .join('');
+  })
+};
+createUsernamesArray(accounts);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
