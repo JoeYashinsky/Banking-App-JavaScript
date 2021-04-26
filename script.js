@@ -109,9 +109,9 @@ const createUsernamesArray = function (accs) {
       .join('');
   });
 };
-createUsernamesArray(accounts);
+createUsernamesArray(accounts);  //array containing all account objects
 console.log(accounts);
-// (4)  array shown with all account subjects, now with a Username property
+// (4)  array shown with all account objects, now with a Username property
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
