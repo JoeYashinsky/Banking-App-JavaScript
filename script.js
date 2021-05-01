@@ -107,6 +107,15 @@ const username = user
 
 console.log(username); // output:  fc
 
+const user1 = 'Gabby Hartnett'; // want to create a username of user's initials
+const username1 = user1
+  .toLowerCase()
+  .split(' ')
+  .map(name => name[0])
+  .join('');
+
+  console.log(username1);  //  output: gh
+
 const createUsernamesArray = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.owner
