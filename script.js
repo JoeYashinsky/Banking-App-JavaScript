@@ -114,7 +114,7 @@ const username1 = user1
   .map(name => name[0])
   .join('');
 
-  console.log(username1);  //  output: gh
+  console.log(username1);  //  output: gh (gh correctly represents lower-cased initials of Gabby Hartnett, joined together)
 
 const createUsernamesArray = function (accs) {
   accs.forEach(function (acc) {
